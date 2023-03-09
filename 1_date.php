@@ -28,7 +28,7 @@ s: Two-digit second (with leading zeros)
 The date_default_timezone_set() function in PHP is used to set the default timezone used by all date/time functions in a PHP script.
 */ 
 
-// date_default_timezone_set("Asia/Dhaka");
+// date_default_timezone_set("Europe/Malta");
 // echo date("h:i:sa");
 
 // Slide 4 Date Functions -> date_add() date_create() date_sub() date_diff() date_interval_create_from_date_string()
@@ -48,14 +48,15 @@ The date_interval_create_from_date_string() function in PHP is used to create a 
 // date_add()- Add days, months, years, hours, minutes and seconds to a date
 
 // $date=date_create("2013-03-15");
-// date_add($date,date_interval_create_from_date_string("40 years"));
+// print_r(date_add($date,date_interval_create_from_date_string("6 months")));
 
 // Slide 5 Date Functions:date_sub()
 // date_sub()-Subtract days, months, years, hours, minutes and seconds to a date
 
-// $date=date_create("2013-03-15");
-// date_sub($date,date_interval_create_from_date_string("40 days"));
-// echo date_format($date,"Y-m-d");
+$date=date_create("2023-03-01");
+$newdate=date_sub($date,date_interval_create_from_date_string("1 year"));
+// echo date_format($date,"Y-m-d").PHP_EOL;
+echo date_format($newdate,"Y-m-d");
 
 // Slide 6 Date Functions : date_diff()
 
@@ -77,5 +78,7 @@ The date_interval_create_from_date_string() function in PHP is used to create a 
 
 // Slide 9 Date Functions date_timestamp_get()
 
-$date=date_create();
-echo date_timestamp_get($date);
+// $date=date_create();
+// echo date_timestamp_get($date);
+
+// DateTime::add();

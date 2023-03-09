@@ -1,6 +1,4 @@
 <?php
-// In PHP, there are several functions that can be used for working with files. Here is an explanation of some of the most commonly used file-related functions:
-
 // fopen(): This function is used to open a file. It takes two parameters: the filename and the mode in which to open the file (read, write, append, etc.).
 
 // fclose(): This function is used to close a file that has been opened with fopen(). It takes one parameter, which is the file handle returned by fopen().
@@ -24,23 +22,23 @@
 $file = fopen("example.txt", "r");
 
 // Read the first line of the file
-$line = fgets($file);
+echo $line = fgets($file);
 
 // Close the file
 fclose($file);
 
 // Write to a file
-$data = "Hello, world!";
-$file = fopen("example.txt", "w");
-fwrite($file, $data);
-fclose($file);
+// $data = "Hello, world!";
+// $file = fopen("example.txt", "w");
+// fwrite($file, $data);
+// fclose($file);
 
 // Read the entire contents of a file into a string
-$data = file_get_contents("example.txt");
+// $data = file_get_contents("example.txt");
 
 // Write to a file using file_put_contents()
-$data = "Hello, world!";
-file_put_contents("example.txt", $data);
+// $data = "Hello, world!";
+// file_put_contents("example.txt", $data);
 
 
 
