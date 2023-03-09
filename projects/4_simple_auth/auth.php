@@ -2,7 +2,7 @@
 session_start([
     'cookie_lifetime' =>300  //5 minutes
 ]);
-$_SESSION['loggedIn']=false;
+$_SESSION['loggedIn']=true;
 
 ?>
 <!DOCTYPE html>

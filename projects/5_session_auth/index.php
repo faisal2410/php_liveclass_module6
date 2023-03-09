@@ -8,6 +8,9 @@ $_SESSION['login']=false;
 // print_r($filename);
 $fp=fopen($filename,'r');
 
+// $data = fgetcsv( $fp );
+// print_r($data);
+
 while($data = fgetcsv( $fp )){
     if(isset($_POST['username']) && isset($_POST['password'])){
         if($data[0]==$_POST['username'] && $data[1]==$_POST['password']){

@@ -77,3 +77,28 @@ fclose($file);
 
 // $data = "Hello, world!";
 // file_put_contents( "myfile.txt", $data,FILE_APPEND);
+
+
+
+//  fgetcsv() is a function that reads a line from a file pointer and parses it as a CSV (Comma Separated Values) formatted string. It returns an array of values representing the fields in the CSV row.
+
+
+// $file_handle = fopen("file.csv", "r");
+// while (!feof($file_handle)) {
+//     $csv_row = fgetcsv($file_handle);
+//     // Process the CSV row here
+// }
+// fclose($file_handle);
+// In this example, fopen() is used to open a CSV file named "file.csv" in read mode, and a file pointer is returned. The while loop reads each line of the file using fgetcsv() until the end of the file is reached. Each line is parsed as a CSV formatted string and returned as an array of fields.
+
+// The fgetcsv() function has several optional parameters that allow you to customize its behavior. For example, you can specify the delimiter character, the enclosure character, and the escape character used in the CSV file.
+
+// $file_handle = fopen("file.csv", "r");
+// while (!feof($file_handle)) {
+//     $csv_row = fgetcsv($file_handle, 0, ";", "'");
+//     // Process the CSV row here
+// }
+// fclose($file_handle);
+// In this example, fgetcsv() is called with additional parameters to specify that the delimiter character is a semicolon (;) and the enclosure character is a single quote ('). The third parameter (0) specifies that the length of the field values is not limited, and the function will read until the end of the field.
+
+// fgetcsv() is a useful function for reading and processing CSV files in PHP, especially when dealing with large datasets.
